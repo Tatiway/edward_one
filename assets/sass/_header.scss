@@ -1,0 +1,147 @@
+
+.header {
+	background-color: rgba(0,0,0, .8);
+	border-bottom: 1px solid $white-color;
+	position: fixed;
+	// top:0;
+	display: none;
+	width: 100%;
+	z-index:999999;
+	&__logo {
+		width: 70px;
+		height: 70px;
+		margin-right: 48px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&__wrap * {
+		display: inline-block;
+		vertical-align: middle;
+		color: $white-color;
+		font: 14px $font-roboto;
+		font-weight: 300;
+	}
+	&__item {
+		padding-right: 38px;
+		list-style: none;
+		&:last-child {
+			padding-right: 55px;
+		}
+		&:hover {
+			opacity: .7;
+		}
+	}
+	&__btn {
+		border: 1px solid $white-color;
+		background-color: transparent;
+		padding: 13px 20px;
+		margin-top: 13px;
+		float: right;
+		&:hover {
+			border: 2px solid $white-color;
+		}
+	}
+	&__toggle {
+		display: none;
+	}
+
+	/*toggle_button*/
+
+  &__toggle {
+    width: 40px;
+    height: 70px;
+    float: right;
+    position: relative;
+  }
+
+  &__sandwich {
+    width: $w;
+    height: $w;
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  &__sw {
+    position: relative;
+    width: $w;
+    height: $h;
+    background: rgb(255, 255, 255);
+    border: none; 
+    transition: transform 0.5s, top 0.2s;
+  }
+  &__sw-topper {
+    top: 0;
+    transition: transform 0.5s, top 0.2s;
+      
+      /* transition-delay: 0.2s, 0s; */
+  }
+  &__sw-bottom{
+      top: $h * 3;
+      transition: transform 0.5s, top 0.2s;
+      transition-delay: 0.2s, 0s; 
+  }
+  &__sw-footer {
+      top: $h * 6;
+      transition: all 0.5s;
+      transition-delay: 0.1s; 
+  }
+
+  &__sandwich.active {
+    .header__sw-topper {
+      top: 8px;
+      transform: rotate(140deg);
+    }
+    .header__sw-bottom {
+      top: 5px;
+      transform: rotate(-140deg);
+    }
+    .header__sw-footer {
+      opacity: 0;
+      top: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+	/*toggle_menu*/
+
+	&__toggle-menu.on{
+		display: none;
+  }
+  &__toggle-menu *{
+		color: $white-color;
+		font: 16px $font-roboto;
+		font-weight: 400;
+  }
+  .head {
+  	&__item_mod {
+			line-height: 36px;
+		&:first-child {
+			margin-top: 20px;
+		}
+		}
+		&__btn_mod {
+			border: 1px solid $white-color;
+			background-color: transparent;
+			padding: 10px 15px;
+			margin:20px 0 30px;
+			float: none;
+		}
+		&__tel_mod {
+			font: 14px $font-roboto;
+			font-weight: 300;
+			margin-bottom: 20px;
+		}
+
+	}
+  
+
+}
+
+
+
+
+
+

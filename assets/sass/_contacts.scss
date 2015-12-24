@@ -1,0 +1,53 @@
+.contacts {
+	&__wrap {
+		max-width: 390px;
+		height: auto;
+		border: 3px solid $black-color;
+		background-color: $white-color;
+		padding-top: 25px;
+		padding-left: 60px;
+		padding-bottom: 35px;
+		padding-right: 30px;
+		position: absolute;
+		top: 166px;
+		left: 14%;
+		z-index: 10;
+		text-align: left;
+	}
+	&__title {
+		font: 16px $font-roboto;
+		font-weight: 700;
+		margin-bottom: 18px;
+	}
+	&__address {
+		font: 14px $font-roboto;
+		font-weight: 300;
+		line-height: 24px;
+		color: $grey-color;
+		margin-bottom: 25px;
+	}
+	&__bltext {
+		font: 14px $font-roboto;
+		font-weight: 700;
+	}
+	&__day {
+		font: 14px $font-roboto;
+		font-weight: 700;
+		color: $grey-color;
+		line-height: 24px;
+		display: inline-block;
+		vertical-align: top;
+		width: 97px;
+		margin-right: 35px;
+	}
+	&__time {
+		font: 14px $font-roboto;
+		font-weight: 300;
+		color: $grey-color;
+		line-height: 24px;
+		width: 97px;
+		display: inline-block;
+		vertical-align: top;
+
+	}
+}

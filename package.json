@@ -1,0 +1,13 @@
+{
+  "name": "edward",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-sass": "latest",
+    "gulp-sequence": "latest",
+    "gulp-server-livereload": "^1.5.4",
+    "gulp-sourcemaps": "latest",
+    "node-normalize-scss": "latest"
+  }
+}

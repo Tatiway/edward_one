@@ -1,0 +1,47 @@
+.black_description{
+	background-color: $black-color;
+	color: $white-color;
+}
+.description {
+	background-image: url(../../img/bg.png);
+	&__white {
+		background: linear-gradient( 90deg, rgba(255,255,255,1) 60%, rgba(255,255,255, .7));
+	}
+	&__black {
+		background: linear-gradient( 90deg, rgba(0,0,0,1) 60%, rgba(0,0,0, .7));
+	}
+	&__cont {
+		padding-top: 117px;
+		padding-bottom: 35px;
+	}
+	&__title {
+		font: 48px $font-roboto;
+		font-weight: 300;
+		line-height: 55px;
+		letter-spacing: 2px;
+		margin-bottom: 55px;
+		text-transform: uppercase;
+	}
+	&__separ {
+		width: 387px;
+		height: 4px;
+		background-color: $black-color;
+		margin: 45px 0;
+	}
+	&__textreg {
+		font: 18px $font-roboto;
+		font-weight: 400;
+		line-height: 25px;
+	}
+	&__textthin {
+		font: 14px $font-roboto;
+		font-weight: 300;
+		line-height: 22px;
+		letter-spacing: 2px;
+	}
+
+}
+
+.black_separ {
+	background-color: $white-color;
+}

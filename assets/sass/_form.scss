@@ -1,0 +1,127 @@
+
+.form {
+	max-width: 555px;
+	height: auto;
+	margin: 0 auto;
+	padding: 20px 67px 31px;
+	position: relative;
+
+	&__title {
+		@extend .description__title;
+		margin-top: 0;
+		font: 45px $font-roboto;
+		font-weight: 300;
+		text-align: center;
+	}
+	&__cont {
+		position: relative;
+		margin-top: 50px;
+		margin-bottom: 55px;
+		&:before, &:after {
+			content: " ";
+			position: absolute;
+			height: 4px;
+			width: 100%;
+			left: 0;
+			background-color: $black-color;
+		}
+		&:before {
+			top: -40px;
+		}
+		&:after {
+			bottom: -40px;
+		}
+	}
+	&__wrap {
+		margin-bottom: 16px;
+		@include clearfix;
+	}
+	&__label {
+		display: inline-block; 
+		@include inputtxt;
+	}
+	&__littletext {
+		font: 10px $font-roboto;
+		font-weight: 300;
+		line-height: 16px;
+		letter-spacing: 0.5px;
+	}
+	&__inputtext {
+		float: right;
+		width: 292px;
+		height: 25px;
+		border: 1px solid $black-color;
+		@include inputtxt;
+	}
+	&__select, &__inputdate {
+		height: 25px;
+		border: 1px solid $black-color;
+		@include inputtxt;
+	}
+	&__select {
+		width: 210px;
+	}
+	&__inputdate {
+		width: 195px;
+		float: right;
+		background-image: url(../../img/calenr.png);
+		background-repeat: no-repeat;
+		background-position:  top right;
+	}
+	&__textarea {
+		display: inline-block;
+		float: right;
+		width: 290px;
+		height: 115px;
+		padding: 5px;
+		@include inputtxt;
+		border: 1px solid $black-color;
+	}
+	&__close {
+		width: 26px;
+		height: 26px;
+		position: absolute;
+		right: 17px;
+		top: 15px;
+		cursor: pointer;
+		&:before, &:after {
+			position: absolute;
+  		left: 11px;
+  		content: ' ';
+  		height: 33px;
+  		width: 1px;
+  		background-color: #333;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+		&:hover {
+			&:before, &:after {
+				width: 2px;
+			}
+		}
+
+		}
+		&__btn {
+			padding: 7px 35px;
+			background-color: $black-color;
+			border: none;
+			color: $white-color;
+			font: 11px $font-roboto;
+			font-weight: 300;
+			letter-spacing: 1;
+			float: right;
+			&:hover {
+				opacity: .8;
+			}
+		}
+
+}
+.label__wrap {
+	width: 109px;
+	margin-bottom: 50px;
+
+}

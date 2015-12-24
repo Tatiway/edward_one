@@ -1,0 +1,67 @@
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  backface-visibility: hidden;
+  
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    background: $black-color;
+    transition: all 100ms ease-in-out;
+  }
+    
+  &:before {
+    transform: rotate(-$arrow_angle);
+  }
+  
+  &:after {
+    transform: rotate($arrow_angle);
+  }
+ 
+  &.top_arrow, 
+  &.bottom_arrow {
+    width: 100px;
+    height: 55px;
+    
+    &:before,
+    &:after {
+      height: 55px;
+      width: 2px;
+      top: 0;
+      left: 50%;
+    }
+  }
+  
+  &.top_arrow {
+    &:before,
+    &:after {
+      transform-origin: 50% 0%;
+    }
+  }
+  
+  &.bottom_arrow {
+    &:before,
+    &:after {
+      transform-origin: 50% 100%;
+    }
+  }
+
+  &.white_arrow {
+  	background-color: $black-color;
+  	&:before, &:after {
+  		background: $white-color;
+  	}
+  }
+
+  &:hover {
+    &:before, &:after {
+      width: 3px;
+    }
+  }
+  
+}

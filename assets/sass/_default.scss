@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+}
+ol, ul, li {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
