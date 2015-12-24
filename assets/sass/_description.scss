@@ -1,47 +1,57 @@
-.black_description{
-	background-color: $black-color;
-	color: $white-color;
-}
+
 .description {
 	background-image: url(../../img/bg.png);
-	&__white {
+
+	&--white {
+		background-color: $white-color;
+	}
+	&--bg-white {
 		background: linear-gradient( 90deg, rgba(255,255,255,1) 60%, rgba(255,255,255, .7));
 	}
-	&__black {
+	&--black {
+		background-color: $black-color;
+		color: $white-color;
+	}
+	&--bg-black {
 		background: linear-gradient( 90deg, rgba(0,0,0,1) 60%, rgba(0,0,0, .7));
 	}
 	&__cont {
-		padding-top: 117px;
-		padding-bottom: 35px;
+		padding-top: 110px;
+		padding-bottom: 30px;
 	}
 	&__title {
 		font: 48px $font-roboto;
 		font-weight: 300;
-		line-height: 55px;
+		line-height: 1.2;
 		letter-spacing: 2px;
 		margin-bottom: 55px;
 		text-transform: uppercase;
 	}
 	&__separ {
-		width: 387px;
+		width: 390px;
 		height: 4px;
-		background-color: $black-color;
 		margin: 45px 0;
+	}
+	&--sp-white {
+		background-color: $black-color;
+	}
+	&--sp-black {
+		background-color: $white-color;
 	}
 	&__textreg {
 		font: 18px $font-roboto;
 		font-weight: 400;
-		line-height: 25px;
+		line-height: 1.4;
 	}
 	&__textthin {
-		font: 14px $font-roboto;
+		font: 16px $font-roboto;
 		font-weight: 300;
-		line-height: 22px;
+		line-height: 1.5;
 		letter-spacing: 2px;
 	}
+	&__arrow {
+		text-align: center;
+		padding-bottom: 20px;
+	}
 
-}
-
-.black_separ {
-	background-color: $white-color;
 }

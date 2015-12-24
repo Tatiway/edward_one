@@ -1,0 +1,62 @@
+	/*toggle_button*/
+
+.header {
+
+  &__toggle {
+    display: none; // на большом экране кнопки нет
+    width: 40px;
+    height: 70px;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+  &__sandwich {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  &__sw {
+    position: relative;
+    width: 35px;
+    height: 2px;
+    background: $white-color;
+    border: none; 
+    transition: transform 0.5s, top 0.2s;
+  }
+  &--sw-topper {
+    top: 0;
+    transition: transform 0.5s, top 0.2s;
+  }
+  &--sw-bottom{
+      top: 2px * 3;
+      transition: transform 0.5s, top 0.2s;
+      transition-delay: 0.2s, 0s; 
+  }
+  &--sw-footer {
+      top: 2px * 6;
+      transition: all 0.5s;
+      transition-delay: 0.1s; 
+  }
+
+  &__sandwich.active {
+    .header--sw-topper {
+      top: 8px;
+      transform: rotate(140deg);
+    }
+    .header--sw-bottom {
+      top: 5px;
+      transform: rotate(-140deg);
+    }
+    .header--sw-footer {
+      opacity: 0;
+      top: 0;
+      transform: rotate(180deg);
+    }
+  }
+}

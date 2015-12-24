@@ -12,7 +12,6 @@
     width: 750px;
   }
 
-
 }
 @media (min-width: 992px) {
   .container {
@@ -57,14 +56,54 @@
 
 /*header*/
   .header {
-    &__wrap {
-      display: none;
-    }
+
+    // 1. появляется кнопка header__toggle 
     &__toggle {
       display: block;
     }
-  }
 
+    // 2. меняем стили меню для мобильной версии
+    &__logo {
+      display: inline-block;
+    }
+    &__nav {
+      display: block;
+      margin: 20px 0 30px;
+    }
+    &__item {
+      display: block;
+    }
+    &__link {
+      color: $white-color;
+      font: 16px $font-roboto;
+      font-weight: 300;
+      line-height: 2.5;
+    }
+    &__tel {
+      display: none;
+
+    }
+    &__btn {
+      float: none;
+      display: block;
+      padding: 10px 20px;
+      margin-bottom: 30px;
+    }
+    &__address {
+      display: block;
+      color: $white-color;
+      font: 14px $font-roboto;
+      font-weight: 300;
+      padding-bottom: 20px;
+      line-height:1.5;
+    }
+    // 3. и прячем меню
+    &--hide {
+      display: none;
+
+    }
+
+  }
 }
 
 
@@ -79,12 +118,21 @@
       text-align: center;
       margin-bottom: 10px;
     }
-    &__inputtext, &__select, &__inputdate , &__textarea, &__btn {
+    &__inputtext, &__select, &__inputdate , &__btn {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__textarea {
+      margin-bottom: 5px;
       width: 100%;
     }
     &__select {
       margin-bottom: 20px;
     }
+    &__text {
+      text-align: center;
+    }
+   
   }
 
   /*contacts*/
@@ -106,30 +154,38 @@
 
   .description {
     &__cont {
-      padding-top: 52px;
-      padding-bottom: 67px;
+      padding-top: 50px;
+      padding-bottom: 70px;
     }
     &__title {
       font: 32px $font-roboto;
       font-weight: 300;
-      line-height: 37px;
+      line-height: 1.2;
       letter-spacing: 1.3px;
       margin-bottom: 40px;
     }
     &__textreg {
       font: 16px $font-roboto;
-      line-height: 25px;
+      line-height: 1.5;
+    }
+    &__textthin {
+      font: 14px $font-roboto;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 1.5px;
     }
     &__separ {
       width: 100%;
-      margin: 26px 0;
+      margin: 25px 0;
     }
   }
+
+  
 
   /* footer */
 
   .footer {
-    &__sosial {
+    &__social {
       display: block;
       float: none;
       margin-top: 40px;
@@ -152,40 +208,26 @@
       margin-left: 25px;
     }
   }
+
+
 }
 
 @media (max-width: 480px) {
 
-  /*arrow*/
 
-  .arrow {
-
-  &.top_arrow, 
-  &.bottom_arrow {
-    width: 50px;
-    height: 27px;
-    
-    &:before,
-    &:after {
-      height: 27px;
-      width: 2px;
-      top: 0;
-      left: 50%;
-      }
-    }
-    &:hover {
-      &:before, &:after {
-        width: 3px;
-    }
-    }
-
-  }
-
+   /*form*/
   .form {
-    padding: 30px 30px 31px;
+    padding: 30px;
+    &__title {
+     font: 40px $font-roboto;
+     font-weight: 300;
+     line-height: 1.2;
+    }
   }
 
-
-
+  /*paralax*/
+  .parallax_cont {
+    height: 450px;
+  }
 
 }

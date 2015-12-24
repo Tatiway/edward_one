@@ -2,23 +2,22 @@
 	background-color: $black-color;
 	padding: 30px 0;
 	color: $white-color;
-	&__cont {
-		> div, img{
-			display: inline-block;
-			vertical-align: middle;
-		}
-	}
 	&__logo {
 		width: 70px;
 		height: 70px;
+		display: inline-block;
+		vertical-align: middle;
 	}
 	&__contacts {
+		display: inline-block;
+		vertical-align: middle;
 		font: 12px $font-roboto;
-		font-weight: 400;
+		font-weight: 300;
 		line-height: 15px;
 		margin-left: 30px;
+		height: 70px;
 	}
-	&__sosial {
+	&__social {
 		float: right;
 		margin-top: 24px;
 	}
@@ -26,9 +25,9 @@
 		list-style: none;
 		width: 30px;
 		height: 30px;
-		background-color: $sosial-color;
+		background-color: $white-color;
 		display: inline-block;
-		margin-left: 22px;
+		margin-left: 20px;
 		padding-top: 5px; 
 		padding-left: 5px;
 		opacity: .7;

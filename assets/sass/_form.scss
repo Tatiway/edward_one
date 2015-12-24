@@ -1,22 +1,26 @@
-
 .form {
 	max-width: 555px;
 	height: auto;
 	margin: 0 auto;
-	padding: 20px 67px 31px;
+	padding: 20px 70px 30px;
 	position: relative;
+	color: $black-color;
 
 	&__title {
-		@extend .description__title;
-		margin-top: 0;
-		font: 45px $font-roboto;
+		font: 47px $font-roboto;
 		font-weight: 300;
+		line-height: 1.2;
+		letter-spacing: 2px;
+		margin-bottom: 55px;
+		text-transform: uppercase;
+		margin-top: 0;
 		text-align: center;
 	}
 	&__cont {
 		position: relative;
 		margin-top: 50px;
-		margin-bottom: 55px;
+		margin-bottom: 35px;
+		padding-bottom: 25px;
 		&:before, &:after {
 			content: " ";
 			position: absolute;
@@ -29,40 +33,41 @@
 			top: -40px;
 		}
 		&:after {
-			bottom: -40px;
+			bottom: -20px;
 		}
 	}
 	&__wrap {
-		margin-bottom: 16px;
-		@include clearfix;
+		margin-bottom: 20px;
 	}
 	&__label {
 		display: inline-block; 
-		@include inputtxt;
+		font: 14px $font-roboto;
+  	font-weight: 300;
+  	letter-spacing: 1.5px;
+  	line-height: 1.5;
+  	text-indent: 5px;
 	}
-	&__littletext {
-		font: 10px $font-roboto;
-		font-weight: 300;
-		line-height: 16px;
-		letter-spacing: 0.5px;
+	&__inputtext, &__select, &__inputdate, &__textarea {
+		height: 25px;
+		border: 1px solid $black-color;
+		font: 14px $font-roboto;
+  	font-weight: 300;
+  	letter-spacing: 1.5px;
+  	line-height: 1.5;
+  	text-indent: 5px;
 	}
 	&__inputtext {
 		float: right;
-		width: 292px;
+		width: 290px;
 		height: 25px;
-		border: 1px solid $black-color;
-		@include inputtxt;
-	}
-	&__select, &__inputdate {
-		height: 25px;
-		border: 1px solid $black-color;
-		@include inputtxt;
 	}
 	&__select {
 		width: 210px;
+		height: 25px;
 	}
 	&__inputdate {
 		width: 195px;
+		height: 25px;
 		float: right;
 		background-image: url(../../img/calenr.png);
 		background-repeat: no-repeat;
@@ -73,22 +78,34 @@
 		float: right;
 		width: 290px;
 		height: 115px;
-		padding: 5px;
-		@include inputtxt;
+	}
+	&__btn {
+		padding: 5px 35px;
+		background-color: $black-color;
+		border: none;
+		color: $white-color;
+		font: 10px $font-roboto;
+		font-weight: 300;
+		letter-spacing: 1;
+		float: right;
 		border: 1px solid $black-color;
+		&:hover {
+			color: $black-color;
+			background-color: $white-color;
+		}
 	}
 	&__close {
-		width: 26px;
-		height: 26px;
+		width: 25px;
+		height: 25px;
 		position: absolute;
-		right: 17px;
+		right: 20px;
 		top: 15px;
 		cursor: pointer;
 		&:before, &:after {
 			position: absolute;
-  		left: 11px;
+  		left: 10px;
   		content: ' ';
-  		height: 33px;
+  		height: 35px;
   		width: 1px;
   		background-color: #333;
 		}
@@ -103,25 +120,13 @@
 				width: 2px;
 			}
 		}
-
-		}
-		&__btn {
-			padding: 7px 35px;
-			background-color: $black-color;
-			border: none;
-			color: $white-color;
-			font: 11px $font-roboto;
-			font-weight: 300;
-			letter-spacing: 1;
-			float: right;
-			&:hover {
-				opacity: .8;
-			}
-		}
-
-}
-.label__wrap {
-	width: 109px;
-	margin-bottom: 50px;
-
+	}
+	&--littletext {
+		font: 10px $font-roboto;
+		letter-spacing: 0.5px;
+	}
+	&--labelwidth {
+		width: 110px;
+		margin-bottom: 55px;
+	}
 }

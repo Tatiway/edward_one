@@ -3,45 +3,36 @@
 
       // header_toggle
 
-  $(".header__sandwich ").click(function() {
-          
+  $(".header__sandwich").click(function() {
+
+
+          // меняем сендвич на крестик
           $(".header__sandwich").toggleClass("active");
 
-          $(this).toggleClass("on");
-
-          $(".header__toggle-menu").slideToggle();
+          // показываем меню мобильной версии
+          $(".header__nav, .header__btn, .header__address").toggleClass('header--hide');
 
         });
 
 
-    $( window ).resize(function() {
-
-        if($(window).width() > 992){
-
-           $(".header__sandwich").removeClass("active");
-
-          $(".header__toggle-menu").fadeOut("fast");
-
-        };
-
-      });
 //////////////////////////////////////////////////////////////////////////
 
 
-      // header_toggle_fide_and_show
-          var $menu = $(".header");
+      //подключаем появление на втором экране
+      
+        //   var $menu = $(".header");
 
-           $(window).scroll( function(){
+        //    $(window).scroll( function(){
 
-            if ( $(this).scrollTop() > 850 ){
+        //     if ( $(this).scrollTop() > 850 ){
 
-                $menu.fadeIn('fast');
+        //         $menu.fadeIn('fast');
 
-            } else if( $(this).scrollTop() <= 850 ) {
+        //     } else if( $(this).scrollTop() <= 850 ) {
               
-                $menu.fadeOut('fast');
-            }
-        });
+        //         $menu.fadeOut('fast');
+        //     }
+        // });
 
         
 	 });
