@@ -6,11 +6,14 @@
   $(".header__sandwich").click(function() {
 
 
+           
+
           // меняем сендвич на крестик
           $(".header__sandwich").toggleClass("active");
 
           // показываем меню мобильной версии
-          $(".header__nav, .header__btn, .header__address").toggleClass('header--hide');
+           $(".header__wrap-menu").toggleClass("header__wrap-menu--hide");
+
 
         });
 

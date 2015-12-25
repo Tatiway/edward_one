@@ -1,16 +1,13 @@
 
 .contacts {
+
 	&__wrap {
 		max-width: 390px;
 		height: auto;
 		border: 3px solid $black-color;
 		background-color: $white-color;
-		padding: 25px 60px 35px 30px;
-		position: absolute;
-		top: 170px;
-		left: 15%;
-		z-index: 10;
-		text-align: left;
+		padding: 20px 45px 40px 65px;
+		margin: 170px 0 130px 0;
 	}
 	&__title {
 		font: 16px $font-roboto;

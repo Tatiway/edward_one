@@ -1,23 +1,21 @@
-
 .description {
 	background-image: url(../../img/bg.png);
 
-	&--white {
-		background-color: $white-color;
-	}
-	&--bg-white {
+	&__gradient--white {
 		background: linear-gradient( 90deg, rgba(255,255,255,1) 60%, rgba(255,255,255, .7));
 	}
-	&--black {
-		background-color: $black-color;
-		color: $white-color;
+	&__gradient--black {
+		background: linear-gradient( 90deg, rgba(0,0,0,1) 60%, rgba(0,0,0, .7));
 	}
 	&--bg-black {
-		background: linear-gradient( 90deg, rgba(0,0,0,1) 60%, rgba(0,0,0, .7));
+		background-color: $black-color;
 	}
 	&__cont {
 		padding-top: 110px;
 		padding-bottom: 30px;
+	}
+	&__cont--black {
+		color: $white-color;
 	}
 	&__title {
 		font: 48px $font-roboto;
@@ -32,10 +30,10 @@
 		height: 4px;
 		margin: 45px 0;
 	}
-	&--sp-white {
+	&__separ--white {
 		background-color: $black-color;
 	}
-	&--sp-black {
+	&__separ--black {
 		background-color: $white-color;
 	}
 	&__textreg {

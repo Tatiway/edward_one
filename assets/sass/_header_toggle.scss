@@ -3,7 +3,7 @@
 .header {
 
   &__toggle {
-    display: none; // на большом экране кнопки нет
+    display: none; // прячем кнопку header__toggle на большом экране
     width: 40px;
     height: 70px;
     float: right;
@@ -29,31 +29,31 @@
     border: none; 
     transition: transform 0.5s, top 0.2s;
   }
-  &--sw-topper {
+  &__sw--topper {
     top: 0;
     transition: transform 0.5s, top 0.2s;
   }
-  &--sw-bottom{
+  &__sw--bottom{
       top: 2px * 3;
       transition: transform 0.5s, top 0.2s;
       transition-delay: 0.2s, 0s; 
   }
-  &--sw-footer {
+  &__sw--footer {
       top: 2px * 6;
       transition: all 0.5s;
       transition-delay: 0.1s; 
   }
 
   &__sandwich.active {
-    .header--sw-topper {
+    .header__sw--topper {
       top: 8px;
       transform: rotate(140deg);
     }
-    .header--sw-bottom {
+    .header__sw--bottom {
       top: 5px;
       transform: rotate(-140deg);
     }
-    .header--sw-footer {
+    .header__sw--footer {
       opacity: 0;
       top: 0;
       transform: rotate(180deg);

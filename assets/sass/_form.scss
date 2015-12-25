@@ -5,7 +5,6 @@
 	padding: 20px 70px 30px;
 	position: relative;
 	color: $black-color;
-
 	&__title {
 		font: 47px $font-roboto;
 		font-weight: 300;
@@ -121,12 +120,16 @@
 			}
 		}
 	}
-	&--littletext {
+	&__label--littletext {
 		font: 10px $font-roboto;
 		letter-spacing: 0.5px;
 	}
-	&--labelwidth {
+	&__label--width {
 		width: 110px;
 		margin-bottom: 55px;
+	}
+	&__text {
+		font: 10px $font-roboto;
+		letter-spacing: 0.5px;
 	}
 }

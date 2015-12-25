@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +12,7 @@
   <link rel="stylesheet" href="libs/calendar/customize.datapicker.css">
   <title>Edward</title>
 </head>
-<body>
+<body onload="init()" onunload="GUnload()">
 
 <!-- header -->	
 <div class="header">
@@ -20,8 +21,8 @@
 		<img class="header__logo" src="img/logo-menu.png" alt="Logo">
 
 
-
-			<ul class="header__nav header--hide ">
+			<div class="header__wrap-menu  header__wrap-menu--hide">
+			<ul class="header__nav header__nav--hide ">
 				<li class="header__item"><a class="header__link" href="">О салоне</a></li>
 				<li class="header__item"><a class="header__link" href="">Меню</a></li>
 				<li class="header__item"><a class="header__link" href="">Клуб</a></li>
@@ -31,16 +32,16 @@
 				<li class="header__item"><a class="header__link" href="">Контакты</a></li>
 			</ul>
 			<div class="header__tel ">+7 (496) 52-43-400</div>
-			<button class="header__btn header--hide">Онлайн запись</button>
-			<div class="header__address header--hide">г. Черноголовка, ул. Солнечная, 4А <br>+7 (496) 52-43-400</div>
-
+			<button class="header__btn header__btn--hide">Онлайн запись</button>
+			<div class="header__address header__address--hide">г. Черноголовка, ул. Солнечная, 4А <br>+7 (496) 52-43-400</div>
+			</div>
 
 			<!-- header__toggle  кнопка появляеться при 992px   -->	
 			<div class="header__toggle">
 				<div class="header__sandwich">
- 						<div class="header__sw header--sw-topper"></div>
- 						<div class="header__sw header--sw-bottom"></div>
- 						<div class="header__sw header--sw-footer"></div>
+ 						<div class="header__sw header__sw--topper"></div>
+ 						<div class="header__sw header__sw--bottom"></div>
+ 						<div class="header__sw header__sw--footer"></div>
  					</div>
 			</div>
 
@@ -78,19 +79,16 @@
 				</div>
 
 				<div class="form__wrap">
-					<label class="form__label form--labelwidth">Особые пожелания<br> </label>
+					<label class="form__label form__label--width">Особые пожелания<br> </label>
 					<textarea class="form__textarea" name="text" ></textarea>
-					<label class="form__label form--littletext ">*обязательные поля<br> </label>
+					<label class="form__label form__label--littletext ">*обязательные поля<br> </label>
 				</div>
 				<div class="form__wrap">
 					<button class="form__btn">Отправить</button>
 				</div>
-
 			</div>
-
-			<p class="form__text form--littletext">Заполните форму выше и нажмите записаться. После чего, вам перезвонят для уточнения информации по поводу наличия свободных мастеров. Также, вы можете записаться, позвонив по телефону +7 (496) 52-43-400.
+			<p class="form__text ">Заполните форму выше и нажмите записаться. После чего, вам перезвонят для уточнения информации по поводу наличия свободных мастеров. Также, вы можете записаться, позвонив по телефону +7 (496) 52-43-400.
 			</p>
-
 		</form>
 	</div>
 
@@ -98,13 +96,13 @@
 
 
 <!-- white_description -->	
-<section class="description description--white">
-	<div class="description__bg description--bg-white ">
+<section class="description">
+	<div class="description__gradient description__gradient--white ">
 		<div class="container">
 			<div class="description__cont">
 				<h1 class="description__title">edward </br> лучший салон</h1>
 				<div class="description__textreg"><p>Мы стремимся предоставить нашим клиентам с уникальным опытом салон. Мы достигаем этого за счет привлечения наиболее талантливых и страстных стилистов; каждый из которых отстаивать высокий уровень сервиса.</p></div>
-				<div class="description__separ description--sp-white "></div>
+				<div class="description__separ description__separ--white "></div>
 				<div class="description__textthin"><p>С момента открытия в 2004 году, мы успешно построили репутацию на талант, с персоналом, так и знающих, посвященный волос, мы гарантируем вам оставить чувство красиво. В Etch салон, превосходство это наше всё, и улучшение никогда не останавливается. Наши сотрудники принимает обширный, непрерывного образования от всемирно известных лидеров индустрии, гарантируя, что ваш новый стиль будет создан с использованием самых до даты методов. Сделайте свой побег в нашей просторный салон 4000 квадратных футов с окнами от пола до потолка, современным освещением и укладки станций, которые поднимают планку для творческой среде салон. Как и вы, мы взволнованы о моде, новые прически и ощущение роскоши. Энергия в ETCH заразен в результате нашей страсти к, что мы делаем.</p></div>
 			</div>
 
@@ -122,13 +120,13 @@
 	</div>
 </section>
 <!-- black_description -->	
-<section class="description description--black">
-	<div class="description__bg description--bg-black ">
+<section class="description description--bg-black">
+	<div class="description__gradient description__gradient--black ">
 		<div class="container">
-			<div class="description__cont">
+			<div class="description__cont description__cont--black">
 				<h1 class="description__title">edward </br> лучший салон</h1>
 				<div class="description__textreg"><p>Мы стремимся предоставить нашим клиентам с уникальным опытом салон. Мы достигаем этого за счет привлечения наиболее талантливых и страстных стилистов; каждый из которых отстаивать высокий уровень сервиса.</p></div>
-				<div class="description__separ description--sp-black "></div>
+				<div class="description__separ description__separ--black "></div>
 				<div class="description__textthin"><p>С момента открытия в 2004 году, мы успешно построили репутацию на талант, с персоналом, так и знающих, посвященный волос, мы гарантируем вам оставить чувство красиво. В Etch салон, превосходство это наше всё, и улучшение никогда не останавливается. Наши сотрудники принимает обширный, непрерывного образования от всемирно известных лидеров индустрии, гарантируя, что ваш новый стиль будет создан с использованием самых до даты методов. Сделайте свой побег в нашей просторный салон 4000 квадратных футов с окнами от пола до потолка, современным освещением и укладки станций, которые поднимают планку для творческой среде салон. Как и вы, мы взволнованы о моде, новые прически и ощущение роскоши. Энергия в ETCH заразен в результате нашей страсти к, что мы делаем.</p></div>
 			</div>
 
@@ -157,33 +155,46 @@
 
 <!-- map -->
 <section class="map">
-<!-- contacts -->
-<div class="contacts">
-		<div class="contacts__wrap">
-			<h4 class="contacts__title">Наши контакты:</h4>
-			<div class="contacts__address">
-				<span class="contacts__bltext">Адрес:</span> г. Черноголовка, ул. Солнечная, 4А <br>
-				<span class="contacts__bltext">Телефон: </span>+7 (496) 52-43-400<br> 
-				<span class="contacts__bltext">E-mail:</span> salon@edwardclub.ru 
-			</div>
-			<h4 class="contacts__title">Время работы:</h4>
-			<div class="contacts__day">
-				Понедельник:<br> Вторник:<br> Среда: <br>Четверг:<br> Пятница:<br> Суббота:<br> Воскресенье:
-			</div>
-			<div class="contacts__time">
-				09:00 – 22:00 09:00 – 22:00 09:00 – 22:00 09:00 – 22:00 09:00 – 22:00 09:00 – 22:00 09:00 – 22:00
+
+	<!-- contacts -->
+	<div class="contacts">
+		<div class="container">
+			<div class="contacts__wrap">
+				<h4 class="contacts__title">Наши контакты:</h4>
+				<div class="contacts__address">
+					<span class="contacts__bltext">Адрес:</span> г. Черноголовка, ул. Солнечная, 4А <br>
+					<span class="contacts__bltext">Телефон: </span>+7 (496) 52-43-400<br> 
+					<span class="contacts__bltext">E-mail:</span> salon@edwardclub.ru 
+				</div>
+				<h4 class="contacts__title">Время работы:</h4>
+				<div class="contacts__day">
+					Понедельник:<br> Вторник:<br> Среда: <br>Четверг:<br> Пятница:<br> Суббота:<br> Воскресенье:
+				</div>
+				<div class="contacts__time">
+					09:00 – 22:00 09:00 – 22:00 09:00 – 22:00 09:00 – 22:00 09:00 – 22:00 09:00 – 22:00 09:00 – 22:00
+				</div>
 			</div>
 		</div>
-</div>
-<div  id="map"></div>
+	</div>
+
+	<div  id="map"  class="map__position"></div>
 </section>
 
 <!-- footer -->
 <footer class="footer">
 	<div class="container">
+
+
 		<div class="footer__cont">
+
+		<div class="footer__left">
 			<img class="footer__logo" src="img/logo-footer.png" alt="">
-			<div class="footer__contacts">All content copyright © 2015 Edward Beauty Club.</br> All rights reserved.</br> </br>  +7 (496) 52-43-400 </br>  salon@edwardclub.ru</div>
+			<div class="footer__text-warp">
+			<div class="footer__copyright">All content copyright © 2015 Edward Beauty Club.</br> All rights reserved.</br></div>   <div class="footer__contacts">+7 (496) 52-43-400 </br>  salon@edwardclub.ru</div>
+			</div>
+		</div>
+
+		<div class="footer__right">
 			<ul class="footer__social">
 				<li class="footer__item">
 					<a href=""><img src="img/social/instagram.svg" alt="instagram"></a>
@@ -206,8 +217,12 @@
 			</li>
 		</ul>
 	</div>
+
+</div>
+
 </div>
 </footer>
+
 
 
 
